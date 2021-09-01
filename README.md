@@ -1,6 +1,12 @@
-# Halaman Penggalangan donasi Dengan NextJS dan Google SpreadSheet Tanpa API
+# Halaman Penggalangan donasi
 
 Menampilkan halaman donasi sederhana dengan menggunakan NextJs, TailwindCss dan Google SpreadSehet
+
+### Todo
+
+- [] Refferensi text dan image dari Google SpreadSheets
+- [] Integrasi dengan Payment Gateway
+- [] Slug berdasarkan tab di google sheets
 
 ### Refferensi
 

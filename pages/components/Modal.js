@@ -30,7 +30,6 @@ const Modal = ({ title, content, show = true, setShow }) => {
 
     return (
         <div className={`fixed top-0 bottom-0 bg-gray-900 bg-opacity-50 w-screen h-full overflow-hidden z-50 ${show ? 'translate-y-0' : 'translate-y-full'}`}>
-
             <div className={`fixed bottom-0 left-0 w-full transform ${show ? 'translate-y-0' : 'translate-y-full'}`}>
                 <div ref={ref} className="w-full max-w-screen-sm mx-auto bg-gray-50 rounded shadow-lg">
                     <header className="px-6 py-3 font-bold flex justify-between items-center border-b">
@@ -57,7 +56,6 @@ const Modal = ({ title, content, show = true, setShow }) => {
                             <div className="text-sm">Kode Transfer</div>
                             <div className="font-semibold">451</div>
                         </div>
-
                         <div className="text-xs py-3 text-gray-600 border-t">
                             Untuk mempermudah pencatatan Tambahkan angka 02 di belakang sebagai kode unik.
                             Misal Anda mentransfer 500.000 tambahkan menjadi 500.002
