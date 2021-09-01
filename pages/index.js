@@ -14,7 +14,7 @@ const currencyFormat = number => {
 const Home = ({ data, total }) => {
   let imageRef = React.createRef();
   let [width, setWidth] = React.useState(0);
-  let [show, setShow] = React.useState(true);
+  let [show, setShow] = React.useState(false);
 
   // const spreadsheetId = '1ntkoy5-3HYQspZ8Ep-eC3uoyQv0V9a7UzFFoCzYqzBo';
   // let [data, setData] = React.useState(null);
