@@ -26,7 +26,7 @@ const Modal = ({ title, content, show = true, setShow }) => {
         };
     }, [ref]);
 
-
+    const linkConfirm = `whatsapp://send?text=${encodeURIComponent('Assalamualaikum Akhi Hadi, Saya mau konfirmasi donasi Kendaraan Operasional Dakwah - Baturaja OKU ')}&phone=6282280024194`
 
     return (
         <div className={`fixed top-0 bottom-0 bg-gray-900 bg-opacity-50 w-screen h-full overflow-hidden z-50 ${show ? 'translate-y-0' : 'translate-y-full'}`}>
@@ -63,7 +63,7 @@ const Modal = ({ title, content, show = true, setShow }) => {
                             Misal Anda mentransfer 500.000 tambahkan menjadi 500.002
                         </div>
 
-                        <a href={`https://wa.me/6282280024194&?text=${encodeURIComponent('Assalamualaikum Akhi Hadi, Saya mau konfirmasi donasi Kendaraan Operasional Dakwah - Baturaja OKU ')}`} className="text-center px-6 py-2 my-4 bg-green-500 rounded-md text-white">Konfirmasi Transfer</a>
+                        <a href={linkConfirm} className="text-center px-6 py-2 my-4 bg-green-500 rounded-md text-white">Konfirmasi Transfer</a>
                     </div>
                 </div>
             </div>
