@@ -7,7 +7,7 @@ import Modal from './components/Modal'
 import axios
   from 'axios'
 const currencyFormat = number => {
-  let formatter = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 });
+  let formatter = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' });
 
   return formatter.format(number)
 }
