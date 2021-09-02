@@ -169,7 +169,7 @@ export async function getServerSideProps() {
   const data = await fetchGoogleSheets(spreadsheetId).then(res => res && res.table && res.table?.rows)
   let total = data && data.reduce((accumulator, currentValue) => accumulator + currentValue.c[1].v, 0)
 
-
+  data.reverse();
   // Pass data to the page via props
   return { props: { data, total } }
 }
