@@ -1,11 +1,11 @@
-import React, { useState } from "react"
+import React from "react"
 import Image from 'next/image'
 
 const Modal = ({ title, content, show = true, setShow }) => {
 
     const ref = React.createRef();
     const account = 6680064020;
-    let [copied, setCopied] = useState(false)
+
     React.useEffect(() => {
 
 
@@ -24,25 +24,7 @@ const Modal = ({ title, content, show = true, setShow }) => {
             // Unbind the event listener on clean up
             document.removeEventListener("mousedown", handleClickOutside);
         };
-
-
     }, [ref]);
-
-    // On componentDidMount set the timer
-    React.useEffect(() => {
-        if (copied) {
-            const timeId = setTimeout(() => {
-                // After 3 seconds set the show value to false
-                setCopied(false)
-            }, 3000)
-
-            return () => {
-                clearTimeout(timeId)
-            }
-        }
-
-    }, [copied, setTimeout]);
-
 
     const linkConfirm = `whatsapp://send?text=${encodeURIComponent('Assalamualaikum Akhi Hadi, Saya mau konfirmasi donasi Kendaraan Operasional Dakwah - Baturaja OKU ')}&phone=6282280024194`
 
@@ -61,7 +43,7 @@ const Modal = ({ title, content, show = true, setShow }) => {
                             <div className="font-bold flex items-center space-x-2">
                                 <span>{account}</span>
                                 <button
-                                    onClick={() => { navigator.clipboard.writeText(account); setCopied(true) }}
+                                    onClick={() => { navigator.clipboard.writeText(account) }}
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-500 hover:text-indigo-500" viewBox="0 0 20 20" fill="currentColor">
                                         <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" />
@@ -83,8 +65,6 @@ const Modal = ({ title, content, show = true, setShow }) => {
                     </div>
                 </div>
             </div>
-
-            <div className={`fixed bottom-5 left-0 z-50 flex justify-center w-full transform ${copied ? 'translate-y-0' : 'translate-y-20'}`}><span className="inline-flex px-4 py-2 bg-gray-700 text-white rounded-md bg-opacity-75">Rekening berhasil di copy</span></div>
         </div>
     )
 

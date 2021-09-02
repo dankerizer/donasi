@@ -1,8 +1,7 @@
-import React from 'react';
 import ReactMarkdown from 'react-markdown'
 
 const Description = () => {
-    let [showMore, setShowMore] = React.useState(false)
+
     const markdown = `### 🏆  DONASI KENDARAAN OPERASIONAL DAKWAH 🏆
 **Untuk Operasional  Ustadz   di Baturaja**
 
@@ -47,13 +46,7 @@ atau klik ⬇️
 Semoga Allah membalas pahala berlipat untuk Bapak/Ibu semua.
 
 **Baarakallahu fiikum**`;
-    return (
-        <div className="relative">
-            <ReactMarkdown children={markdown} className={`prose lg:prose-md px-4 md:px-6 py-6  overflow-y-hidden relative ${showMore ? 'h-auto' : 'h-60'}`} />
-            <div className="h-16 w-full absolute bottom-0 left-0 from-white bg-blend-saturation to-transparent bg-gradient-to-t"></div>
-            <button className="w-full text-center text-indigo-500  z-30 py-3 -bottom-10 absolute left-0" onClick={() => setShowMore(!showMore)}>{showMore ? 'Lihat lebih sedikit' : 'Lihat lebih banyak'}</button>
-        </div>
-    )
+    return <ReactMarkdown children={markdown} className="prose lg:prose-md px-4 md:px-6 py-6" />
 
 }
 
