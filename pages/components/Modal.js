@@ -53,7 +53,7 @@ const Modal = ({ title, content, show = true, setShow }) => {
                             </div>
                         </div>
                         <div className="flex justify-between leading-none">
-                            <div className="text-sm">Kode Bank BSI</div>
+                            <div className="text-sm">Kode Transfer</div>
                             <div className="font-semibold">451</div>
                         </div>
                         <div className="text-xs py-3 text-gray-600 border-t">
